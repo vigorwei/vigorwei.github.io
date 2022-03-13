@@ -1,159 +1,249 @@
 <!DOCTYPE html>
-<html><head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="google" content="notranslate">
-  <title>golang &middot; My Blog</title>
-  <meta name="keywords" content="素锦, inspiration, customization, rainmeter, design, web, 壁纸, 设计, 收集, wallpaper, collection, jaku, icon">
-  <meta name="description" content="世界上每个角落都有人过着相似的人生">
-  <meta name="author" content="camellia">
-  <link rel="icon" type="image/png" href="">
-  <link rel="stylesheet" href="/css/diaspora.css">
-  <link rel="stylesheet" href="/css/insight.css">
-  <link rel="stylesheet" href="/css/custom.css">
-</head><body class="loading">
-        <div id="loading"></div>
-				<div id="nav"></div>
-				<div class="nav-user"></div><div class="nav">
-  <ul id="menu-menu" class="menu">
-    
-        <li ><a target="_blank" href="/about/" class="pviewa">About</a></li>
-    
-        <li ><a target="" href="/links/" class="pviewa">Links</a></li>
-    
-        <li ><a target="" href="/archives/" class="pviewa">Archives</a></li>
-    
-        <li ><a target="" href="/categories/" class="pviewa">Categories</a></li>
-    
-        <li ><a target="" href="/tags/" class="pviewa">Tags</a></li>
-    
-    <div id="search-input-wrap" class="on">
-      <div id="search-input-icon">
-        <i class="fa fa-search"></i>
-      </div>
-      <span style="position: relative; display: inline-block; direction: ltr;">
-        <input id="search-input" placeholder="Search..." style="position: relative; vertical-align: top;">
-      </span>
-    </div>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
-            <span class="ins-close ins-selectable"><i class="icon-close"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: '文章',
-            TAGS: '便签',
-        },
-        ROOT_URL: "https://vigorwei.github.io/",
-        CONTENT_URL: '/lunr.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-  </ul>
-  <p>&copy 2019 素锦 · Theme Diaspora Powered by Hugo</p>
-</div>
-<div id="container">
-        
-<div id="screen">
-    <div id="mark">
-        <div class="layer" data-depth="0.4">
-            <img id="cover" crossorigin="anonymous" src="/img/wallhaven-672007-2.jpg">
-        </div>
-    </div>
+<html lang="zh-CN" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=''><title>Series: golang - My Blog</title>
 
-    <div id="vibrant">
-        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
-            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 " style="fill: rgb(176, 14, 36);"></polygon>
-        </svg>
-        <div style="background-color: rgb(176, 14, 36);"></div>
-    </div>
-    <div id="header">
-        <div>
-            <a class="image-logo" href="https://vigorwei.github.io/"></a>
-            <div class="icon-menu switchmenu" style="color: rgb(195, 106, 82);"></div>
-        </div>
-    </div>
-    <div id="post0">
-        <p>April 11, 2019</p>
-        <h2><a title="你走了真好，不然总担心你要走" class="posttitle" href="https://vigorwei.github.io/posts/%E4%BD%A0%E8%B5%B0%E4%BA%86%E7%9C%9F%E5%A5%BD%E4%B8%8D%E7%84%B6%E6%80%BB%E6%8B%85%E5%BF%83%E4%BD%A0%E8%A6%81%E8%B5%B0/">你走了真好，不然总担心你要走</a></h2>
-        <p>最近一次苏晴产生离婚的想法，是两个月以前，天桥下买煎饼的时候。 老公掏零钱，不小心从裤兜里掉落一袋套套...<p>
-    </div>
-</div>
+<link rel='canonical' href='https://vigorwei.github.io/series/golang/'>
 
-        <div id="primary">
+<link rel="stylesheet" href="/scss/style.min.b80bf249ce4a22cf55e8d7340a0b37a2f2c10f54f3a9a49cb94b694a2eb0bbea.css"><meta property='og:title' content='Series: golang - My Blog'>
+<meta property='og:description' content=''>
+<meta property='og:url' content='https://vigorwei.github.io/series/golang/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2022-03-13T00:00:00&#43;00:00 '/>
+<meta name="twitter:title" content="Series: golang - My Blog">
+<meta name="twitter:description" content=""><link rel="alternate" type="application/rss&#43;xml" href="https://vigorwei.github.io/series/golang/index.xml">
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
             
-    
-        <div class="post">
-            <a href="https://vigorwei.github.io/posts/1/" title="20">
-                <img width="680" height="440" src="/img/wallhaven-279676.jpg" class="cover">
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
             </a>
-            <div class="else">
-                <p>March 13, 2019</p>
-                <h3>
-                <a title="20" class="posttitle" href="https://vigorwei.github.io/posts/1/">
-                20</a>
-                </h3>
-                <p>hugo的常用指令合集...</p>
-                <p class="here">
-                    <span class="icon iconfont icon-Aa">67</span>
-                    </span>
-                    
-                    
-                    <span class="icon iconfont icon-biaoqian">
-                        
-                            <a style="margin-right: 5px" class="post-tags-list-link" href='/tags/web'>web</a>
-                        
-                            <a style="margin-right: 5px" class="post-tags-list-link" href='/tags/hexo'>hexo</a>
-                        
-                    </span>
-                    
-                    
-                    
-                    
-                    <span class="icon iconfont icon-dakaizhuangtai">
-                        
-                            <a class="post-tags-list-link" href="/categories/%E6%8A%80%E6%9C%AF">技术</a>
-                        
-                    </span>
-                    
-                    
-                    
-                </p>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/page/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <header>
+        <h3 class="section-title">
+            
+                Series
+            
+        </h3>
+
+        <div class="section-card">
+            <div class="section-details">
+                <h3 class="section-count">1 page</h3>
+                <h1 class="section-term">golang</h1>
+                
             </div>
         </div>
+    </header>
+    
+    <section class="article-list--compact">
+        
+            <article>
+    <a href="/posts/%E4%BD%A0%E8%B5%B0%E4%BA%86%E7%9C%9F%E5%A5%BD%E4%B8%8D%E7%84%B6%E6%80%BB%E6%8B%85%E5%BF%83%E4%BD%A0%E8%A6%81%E8%B5%B0/">
+        <div class="article-details">
+            <h2 class="article-title">你走了真好，不然总担心你要走</h2>
+            <footer class="article-time">
+                <time datetime='2019-04-11T23:36:51&#43;08:00'>Apr 11, 2019</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+    </section>
+<footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2022 My Blog
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.10.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+            </main>
     
 
-
         </div>
-        
-    </div>
-    <div id="preview" ></div>
-<p style="text-align: center;">
-  <a style="color: inherit" target="_blank" href="https://github.com/honjun/hugo-theme-diaspora"></a>
-</p>
-
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>
-  var siteTitle = "My Blog";
-</script>
-<script src="/js/jquery.min.js"></script>
-<script src="/js/plugin.js"></script>
-<script src="/js/diaspora.js"></script>
-<script src="/js/custom.js"></script>
-<script src="/js/InsightSearch.js"></script>
-</body>
-</html>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
 
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

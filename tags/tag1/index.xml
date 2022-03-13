@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>tag1 on My Blog</title>
-    <link>https://vigorwei.github.io/tags/tag1/</link>
-    <description>Recent content in tag1 on My Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Thu, 11 Apr 2019 23:36:51 +0800</lastBuildDate><atom:link href="https://vigorwei.github.io/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>你走了真好，不然总担心你要走</title>
-      <link>https://vigorwei.github.io/posts/%E4%BD%A0%E8%B5%B0%E4%BA%86%E7%9C%9F%E5%A5%BD%E4%B8%8D%E7%84%B6%E6%80%BB%E6%8B%85%E5%BF%83%E4%BD%A0%E8%A6%81%E8%B5%B0/</link>
-      <pubDate>Thu, 11 Apr 2019 23:36:51 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/posts/%E4%BD%A0%E8%B5%B0%E4%BA%86%E7%9C%9F%E5%A5%BD%E4%B8%8D%E7%84%B6%E6%80%BB%E6%8B%85%E5%BF%83%E4%BD%A0%E8%A6%81%E8%B5%B0/</guid>
-      <description>最近一次苏晴产生离婚的想法，是两个月以前，天桥下买煎饼的时候。 老公掏零钱，不小心从裤兜里掉落一袋套套</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>tag1 on Cammelia</title>
+        <link>https://vigorwei.github.io/tags/tag1/</link>
+        <description>Recent content in tag1 on Cammelia</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 11 Apr 2019 23:36:51 +0800</lastBuildDate><atom:link href="https://vigorwei.github.io/tags/tag1/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>你走了真好，不然总担心你要走</title>
+        <link>https://vigorwei.github.io/posts/%E4%BD%A0%E8%B5%B0%E4%BA%86%E7%9C%9F%E5%A5%BD%E4%B8%8D%E7%84%B6%E6%80%BB%E6%8B%85%E5%BF%83%E4%BD%A0%E8%A6%81%E8%B5%B0/</link>
+        <pubDate>Thu, 11 Apr 2019 23:36:51 +0800</pubDate>
+        
+        <guid>https://vigorwei.github.io/posts/%E4%BD%A0%E8%B5%B0%E4%BA%86%E7%9C%9F%E5%A5%BD%E4%B8%8D%E7%84%B6%E6%80%BB%E6%8B%85%E5%BF%83%E4%BD%A0%E8%A6%81%E8%B5%B0/</guid>
+        <description>&lt;p&gt;&amp;ldquo;那只祖传的老钟从容自在地打起来，仿佛积蓄了半天的时间，等夜深人静，搬出来一一细数：“当、当、当、当、当、当”响了六下。六点钟是五个钟头以前，那时候鸿渐在回家的路上走，蓄心要待柔嘉好，劝他别再为昨天的事弄得夫妇不欢；那时候，柔嘉在家里等鸿渐回家来吃晚饭，希望他会跟姑母和好，到她厂里做事。这个时间落伍的计时机无意中包涵对人生的讽刺和感伤，深于一切语言、一切啼笑。&lt;/p&gt;
+&lt;p&gt;Author：「围城」&lt;!-- raw HTML omitted --&gt;
+BGM：街道的寂寞&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

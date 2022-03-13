@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='hugo更新指令 往基于github的Hugo静态博客推送新博文的步骤分为以下几步：
+ 用hugo new命令新建md文件 用hugo -D 生成public html 文件 前往public目录 用git add -A命令将全部更新的文件添加到暂存区 用git commit 命令将暂存区内容添加到分支 用git push 命令将分支内容推到github上去  hugo常用指令集 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  git clone https://github.com/digitalcraftsman/hugo-agency-theme hugo server -t hugo-theme-diaspora-master --buildDrafts hugo new post/blog.md hugo --theme=diaspora --baseUrl=&amp;#34;https://vigorwei.github.io/&amp;#34; --buildDrafts cd public git init git add * git commit -m &amp;#34;我的 hugo 博客第一次提交&amp;#34; git remote add origin https://github.'><title>Hugo Relate Api</title>
+
+<link rel='canonical' href='https://vigorwei.github.io/p/hugo-relate-api/'>
+
+<link rel="stylesheet" href="/scss/style.min.b80bf249ce4a22cf55e8d7340a0b37a2f2c10f54f3a9a49cb94b694a2eb0bbea.css"><meta property='og:title' content='Hugo Relate Api'>
+<meta property='og:description' content='hugo更新指令 往基于github的Hugo静态博客推送新博文的步骤分为以下几步：
+ 用hugo new命令新建md文件 用hugo -D 生成public html 文件 前往public目录 用git add -A命令将全部更新的文件添加到暂存区 用git commit 命令将暂存区内容添加到分支 用git push 命令将分支内容推到github上去  hugo常用指令集 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  git clone https://github.com/digitalcraftsman/hugo-agency-theme hugo server -t hugo-theme-diaspora-master --buildDrafts hugo new post/blog.md hugo --theme=diaspora --baseUrl=&amp;#34;https://vigorwei.github.io/&amp;#34; --buildDrafts cd public git init git add * git commit -m &amp;#34;我的 hugo 博客第一次提交&amp;#34; git remote add origin https://github.'>
+<meta property='og:url' content='https://vigorwei.github.io/p/hugo-relate-api/'>
+<meta property='og:site_name' content='Cammelia'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-03-13T15:05:12&#43;08:00'/><meta property='article:modified_time' content='2022-03-13T15:05:12&#43;08:00'/><meta property='og:image' content='https://vigorwei.github.io/p/hugo-relate-api/helena-hertz-wWZzXlDpMog-unsplash.jpg' />
+<meta name="twitter:title" content="Hugo Relate Api">
+<meta name="twitter:description" content="hugo更新指令 往基于github的Hugo静态博客推送新博文的步骤分为以下几步：
+ 用hugo new命令新建md文件 用hugo -D 生成public html 文件 前往public目录 用git add -A命令将全部更新的文件添加到暂存区 用git commit 命令将暂存区内容添加到分支 用git push 命令将分支内容推到github上去  hugo常用指令集 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  git clone https://github.com/digitalcraftsman/hugo-agency-theme hugo server -t hugo-theme-diaspora-master --buildDrafts hugo new post/blog.md hugo --theme=diaspora --baseUrl=&amp;#34;https://vigorwei.github.io/&amp;#34; --buildDrafts cd public git init git add * git commit -m &amp;#34;我的 hugo 博客第一次提交&amp;#34; git remote add origin https://github."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://vigorwei.github.io/p/hugo-relate-api/helena-hertz-wWZzXlDpMog-unsplash.jpg' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu9e677cef8e9c26b9c0345ca6c79d2d57_7885_300x0_resize_box_3.png" width="300"
+                            height="306" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Cammelia</a></h1>
+            <h2 class="site-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://vigorwei.github.io/" selected>English</option>
+                        
+                            <option value="https://vigorwei.github.io/zh-cn/" >中文</option>
+                        
+                            <option value="https://vigorwei.github.io/ar/" >عربي</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/hugo-relate-api/">
+                <img src="/p/hugo-relate-api/helena-hertz-wWZzXlDpMog-unsplash_hu45a5e3ad5e058da6a00650ed8fd40bea_15530_800x0_resize_q75_box.jpg"
+                        srcset="/p/hugo-relate-api/helena-hertz-wWZzXlDpMog-unsplash_hu45a5e3ad5e058da6a00650ed8fd40bea_15530_800x0_resize_q75_box.jpg 800w, /p/hugo-relate-api/helena-hertz-wWZzXlDpMog-unsplash_hu45a5e3ad5e058da6a00650ed8fd40bea_15530_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="600" 
+                        loading="lazy"
+                        alt="Featured image of post Hugo Relate Api" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%8A%80%E6%9C%AF/" >
+                技术
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/hugo-relate-api/">Hugo Relate Api</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 13, 2022</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="hugo更新指令">hugo更新指令</h2>
+<p>往基于github的Hugo静态博客推送新博文的步骤分为以下几步：</p>
+<ol>
+<li>用hugo new命令新建md文件</li>
+<li>用hugo -D 生成public html 文件</li>
+<li>前往public目录</li>
+<li>用git add -A命令将全部更新的文件添加到暂存区</li>
+<li>用git commit 命令将暂存区内容添加到分支</li>
+<li>用git push 命令将分支内容推到github上去</li>
+</ol>
+<h2 id="hugo常用指令集">hugo常用指令集</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/digitalcraftsman/hugo-agency-theme
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">hugo server -t hugo-theme-diaspora-master --buildDrafts
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">hugo new post/blog.md
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">hugo --theme=diaspora --baseUrl=&#34;https://vigorwei.github.io/&#34; --buildDrafts
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cd public
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git add *
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git commit -m &#34;我的 hugo 博客第一次提交&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git remote add origin https://github.com/LastKnightCoder/lastknightcoder.github.io.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git push -u origin master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="开始使用hugo">开始使用hugo！</h2>
+<h3 id="下载安装hugo">下载安装hugo</h3>
+<p>我们为了简便快速当然选择hugo的二进制安装方式，源码安装有机会再去学习。
+去hugo的官方<a class="link" href="https://github.com/gohugoio/hugo/releases"  target="_blank" rel="noopener"
+    >github仓库</a>下载对应的操作系统版本的Hugo二进制文件:
+<img src="https://wx4.sinaimg.cn/large/006bYVyvly1g21e25mefyj30pn0gvwgx.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+博主以windows64位操作系统为例，下载对应的Windows-64bit.zip。
+<img src="https://ws3.sinaimg.cn/large/006bYVyvly1g21e7f3btuj30ig06d74g.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+下载完成后解压缩得到如上文件。</p>
+<p>Mac下直接使用Homebrew安装：(其他步骤同理略)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">brew install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="hugo环境变量配置">hugo环境变量配置</h3>
+<p>上一步操作，可以看到我们把hugo.exe解压到了<code>D:\hugo</code>下面。所以hugo命令只能在该目录下才能识别。但是我们想要把博客目录建到其他目录下，这就需要配置环境变量。
+此电脑-&gt;右键-&gt;点击属性：
+<img src="https://wx2.sinaimg.cn/large/006bYVyvly1g21eivtvt1j30dg0a374t.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+再点击高级系统设置：
+<img src="https://wx2.sinaimg.cn/large/006bYVyvly1g21ek2dsicj30l409xwf7.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+点击环境变量
+<img src="https://ws4.sinaimg.cn/large/006bYVyvly1g21ekzxmurj30de0gigm7.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+在系统变量中找到path，再点击编辑
+<img src="https://wx2.sinaimg.cn/large/006bYVyvly1g21emshet7j30ha0i33zk.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+点击新建，填入hugo解压的文件目录，比如博主解压在<code>D:\hugo</code>就填的是<code>D:\hugo</code>
+<img src="https://ws3.sinaimg.cn/large/006bYVyvly1g21eo0w30nj30f10fuwfr.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+注意：win10以下系统界面不一样，比如win7，直接在path最前或最后加入地址就行，注意用英文<code>;</code>分号分割开，不会的小白可以问度娘。
+配置好后点击确定，然后打开cmd命令行程序就可以在任意位置使用hugo命令了。</p>
+<h3 id="hugo新建博客">hugo新建博客</h3>
+<p>win+R键打开运行框，输入cmd打开命令行。
+<img src="https://wx2.sinaimg.cn/large/006bYVyvly1g21exsj1k7j30bb06caa6.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+使用如下命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">hugo new site /path/to/site
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>比如<code>hugo new site E:/hugo/hojunBlog</code>就在E盘hugo文件夹下新建了一个叫hojunBlog的hugo站点。
+<img src="https://ws4.sinaimg.cn/large/006bYVyvly1g21f1bmco9j30j1081t99.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h3 id="hugo新建页面和文章">hugo新建页面和文章</h3>
+<p>新建一个links页面：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">hugo new links.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>links.md 自动生成到了 content/links.md，内容如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Links&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2019-04-11T23:35:53</span><span class="m">+08</span><span class="p">:</span><span class="m">00</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>创建第一篇文章，放到 post 目录，方便之后生成聚合页面。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">hugo new post/myfirst.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>links.md 自动生成到了 content/post/myfirst.md，内容如下:(注意这里需要把draft删除掉，不然正式生产的时候不会生成文章，因为draft是草稿)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Myfirst&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2019-04-13T23:23:34</span><span class="m">+08</span><span class="p">:</span><span class="m">00</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="hugo安装主题">hugo安装主题</h3>
+<p>新建文章后不要着急，还需要安装hugo主题才行。去官方主题列表<a class="link" href="https://themes.gohugo.io/"  target="_blank" rel="noopener"
+    >themes.gohugo.io</a>里去挑选自己想要的主题。
+<img src="https://ws1.sinaimg.cn/large/006bYVyvgy1g21gadn598j30rh0goq7n.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>。
+我们这里以icarus主题为例来安装主题。github仓库地址<a class="link" href="https://github.com/digitalcraftsman/hugo-icarus-theme"  target="_blank" rel="noopener"
+    >github.com/digitalcraftsman/hugo-icarus-theme</a>
+<img src="https://wx3.sinaimg.cn/large/006bYVyvgy1g21gbu80toj315o0p0wyi.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h4 id="根据文档clone主题">根据文档clone主题</h4>
+<p>在Hugo站点运行的文件夹中</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl"><span class="k">cd</span> themes
+</span></span><span class="line"><span class="cl">git clone https://github.com/digitalcraftsman/hugo-icarus-theme.git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="配置主题">配置主题</h4>
+<p>找到icarus主题下的<code>hojunBlog\themes\hugo-icarus-theme\exampleSite\config.toml</code>复制其内容到根目录下的<code>hojunBlog\config.toml</code>中，接着修改根目录下的配置文件部分内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseurl</span> <span class="p">=</span> <span class="s2">&#34;https://yourname.github.io&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;en-us&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Icarus&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Enable comments by entering your Disqus shortname</span>
+</span></span><span class="line"><span class="cl"><span class="nx">disqusShortname</span> <span class="p">=</span> <span class="s2">&#34;spf13&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Enable Google Analytics by entering your tracking code</span>
+</span></span><span class="line"><span class="cl"><span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Define the number of posts per page</span>
+</span></span><span class="line"><span class="cl"><span class="nx">paginate</span> <span class="p">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="nx">footnotereturnlinkcontents</span> <span class="p">=</span> <span class="s2">&#34;↩&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;hugo-icarus-theme&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Comment the themesDir option if you use this theme in production</span>
+</span></span><span class="line"><span class="cl"><span class="nx">themesDir</span> <span class="p">=</span> <span class="s2">&#34;./themes/&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中重要的是<code>baseurl</code>、<code>theme</code>、<code>themesDir</code>的配置，其他的配置可以之后慢慢设置。<code>baseurl</code>需要改成你的github pages的仓库名，<code>theme</code>、<code>themesDir</code>改成主题目录名和主题路径（上图填的是相对路径）。
+其他配置可以参考icarus主题的文档，这里就不做介绍了。</p>
+<h4 id="使用命令来预览发布主题">使用命令来预览、发布主题</h4>
+<p>在根目录（比如这里是hojunBlog下）执行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="cl">hugo server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="https://wx4.sinaimg.cn/large/006bYVyvly1g22b79c6vcj30my0dyq3l.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+然后打开浏览器，输入<code>localhost:1313</code>就可以看到自己的博客了！（注意之前说的文章里的draft: true要删掉哦）
+<img src="https://ws2.sinaimg.cn/large/006bYVyvly1g22ba3esz4j30zw0j6myr.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<p>接着就是要发布主题到github上了，注册github，新建yourname.github.io的仓库，配置SSH，复制仓库的github pages地址到之前说的配置的baseurl中(就是https://yourname.github.io)，然后使用命令：</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-contents--wrapper">
+    <h2 class="section-title">Related contents</h2>
+    <div class="related-contents">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/1/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">1</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 Cammelia
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.10.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#hugo更新指令">hugo更新指令</a></li>
+    <li><a href="#hugo常用指令集">hugo常用指令集</a></li>
+    <li><a href="#开始使用hugo">开始使用hugo！</a>
+      <ol>
+        <li><a href="#下载安装hugo">下载安装hugo</a></li>
+        <li><a href="#hugo环境变量配置">hugo环境变量配置</a></li>
+        <li><a href="#hugo新建博客">hugo新建博客</a></li>
+        <li><a href="#hugo新建页面和文章">hugo新建页面和文章</a></li>
+        <li><a href="#hugo安装主题">hugo安装主题</a>
+          <ol>
+            <li><a href="#根据文档clone主题">根据文档clone主题</a></li>
+            <li><a href="#配置主题">配置主题</a></li>
+            <li><a href="#使用命令来预览发布主题">使用命令来预览、发布主题</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

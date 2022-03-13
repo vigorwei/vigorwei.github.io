@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>关于 on My Blog</title>
-    <link>https://vigorwei.github.io/about/</link>
-    <description>Recent content in 关于 on My Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Sat, 20 Apr 2019 23:08:32 +0800</lastBuildDate><atom:link href="https://vigorwei.github.io/about/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
+    <channel>
+        <title>关于 on Cammelia</title>
+        <link>https://vigorwei.github.io/about/</link>
+        <description>Recent content in 关于 on Cammelia</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 20 Apr 2019 23:08:32 +0800</lastBuildDate><atom:link href="https://vigorwei.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    </channel>
 </rss>
