@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>技术 on My hugoBlog</title>
+    <title>技术 on My Blog</title>
     <link>https://vigorwei.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
-    <description>Recent content in 技术 on My hugoBlog</description>
+    <description>Recent content in 技术 on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 13 Mar 2019 23:23:34 +0800</lastBuildDate><atom:link href="https://vigorwei.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://vigorwei.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>10</title>
-      <link>https://vigorwei.github.io/posts/10/</link>
+      <title>1</title>
+      <link>https://vigorwei.github.io/posts/2/</link>
+      <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://vigorwei.github.io/posts/2/</guid>
+      <description>什么是hugo 而且就如它官网介绍：The world’s fastest framework for building websites。Hugo是目前最快的</description>
+    </item>
+    
+    <item>
+      <title>20</title>
+      <link>https://vigorwei.github.io/posts/1/</link>
       <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
       
-      <guid>https://vigorwei.github.io/posts/10/</guid>
-      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
+      <guid>https://vigorwei.github.io/posts/1/</guid>
+      <description>hugo常用命令 git clone https://github.com/digitalcraftsman/hugo-agency-theme hugo server -t hugo-theme-diaspora-master &amp;ndash;buildDrafts hugo new post/blog.md hugo &amp;ndash;theme=hugo-agency-theme &amp;ndash;baseUrl=&amp;ldquo;https://lastknightcoder.github.io/&amp;quot; &amp;ndash;buildDrafts cd public git init git add * git commit -m &amp;ldquo;我的 hugo 博客第一次提交</description>
     </item>
     
   </channel>

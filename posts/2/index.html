@@ -6,10 +6,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate">
-  <title>2 &middot; My hugoBlog</title>
+  <title>1 &middot; My Blog</title>
   <meta name="keywords" content="素锦, inspiration, customization, rainmeter, design, web, 壁纸, 设计, 收集, wallpaper, collection, jaku, icon">
   <meta name="description" content="世界上每个角落都有人过着相似的人生">
-  <meta name="author" content="hojun">
+  <meta name="author" content="camellia">
   <link rel="icon" type="image/png" href="">
   <link rel="stylesheet" href="/css/diaspora.css">
   <link rel="stylesheet" href="/css/insight.css">
@@ -28,7 +28,7 @@
         </div>
         
         <h3 class="subtitle" style="display: none;">
-        2</h3>
+        1</h3>
         <div class="social">
             <div>
                 <div class="share">
@@ -43,21 +43,38 @@
         <div class="article">
             <div>
                 <h1 class="title">
-                2</h1>
+                1</h1>
                 <div class="stuff">
                     
-                    <span>March 13, 2019</span>
-                    <span>字数 1883</span>
+                    <span>March 13, 2022</span>
+                    <span>字数 1762</span>
                     
                     
                 </div>
                 <div class="content">
-                    <p>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo仅需一个二进制文件（hugo.exe）即可实现网站生成的生成。</p>
-<h2 id="什么是hugo">什么是hugo</h2>
+                    <h2 id="什么是hugo">什么是hugo</h2>
 <p>而且就如它官网介绍：The world’s fastest framework for building websites。Hugo是目前最快的网站构建框架。凭借其惊人的速度和灵活性，解决了环境依赖、性能较差的问题，还有使用简单、部署方便等诸多优点，通过 LiveReload 实时刷新，极大的优化文章的写作体验。Hugo使建站再次变得有趣。</p>
-<h2 id="hugo能做什么">hugo能做什么</h2>
-<p>hugo是静态网站生成器，能够作为一些展示类网站的解决方案。比如个人博客、产品介绍、个人作品展示、文档介绍、公司官网等等。再加上Github Pages的功能，就能不花一分钱建一个自己的网站了。</p>
-<h2 id="开始使用hugo">开始使用hugo！</h2>
+<h2 id="hugo常用指令集">hugo常用指令集</h2>
+<pre tabindex="0"><code class="language-git" data-lang="git">git clone https://github.com/digitalcraftsman/hugo-agency-theme
+
+hugo server -t hugo-theme-diaspora-master --buildDrafts
+
+hugo new post/blog.md
+
+hugo --theme=hugo-agency-theme --baseUrl=&#34;https://lastknightcoder.github.io/&#34; --buildDrafts
+
+cd public
+
+git init
+
+git add *
+
+git commit -m &#34;我的 hugo 博客第一次提交&#34;
+
+git remote add origin https://github.com/LastKnightCoder/lastknightcoder.github.io.git
+
+git push -u origin master
+</code></pre><h2 id="开始使用hugo">开始使用hugo！</h2>
 <h3 id="下载安装hugo">下载安装hugo</h3>
 <p>我们为了简便快速当然选择hugo的二进制安装方式，源码安装有机会再去学习。
 去hugo的官方<a href="https://github.com/gohugoio/hugo/releases">github仓库</a>下载对应的操作系统版本的Hugo二进制文件:
@@ -161,10 +178,8 @@
                     <a href="javascript: window.scrollTo(0, 0);">
                     返回顶部</a>
                     
-                        <a href="https://vigorwei.github.io/posts/3/" rel="prev">上一篇</a>
+                        <a href="https://vigorwei.github.io/posts/%E4%BD%A0%E8%B5%B0%E4%BA%86%E7%9C%9F%E5%A5%BD%E4%B8%8D%E7%84%B6%E6%80%BB%E6%8B%85%E5%BF%83%E4%BD%A0%E8%A6%81%E8%B5%B0/" rel="prev">上一篇</a>
                     
-                    
-                        <a href="https://vigorwei.github.io/posts/12/" rel="next">下一篇</a>
                     
                 </span>
             </h3>
@@ -179,7 +194,7 @@
 </p>
 
 <script>
-  var siteTitle = "My hugoBlog";
+  var siteTitle = "My Blog";
 </script>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/plugin.js"></script>

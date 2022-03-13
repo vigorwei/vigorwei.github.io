@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My hugoBlog</title>
+    <title>Tags on My Blog</title>
     <link>https://vigorwei.github.io/tags/</link>
-    <description>Recent content in Tags on My hugoBlog</description>
+    <description>Recent content in Tags on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 11 Apr 2019 23:36:51 +0800</lastBuildDate><atom:link href="https://vigorwei.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -31,15 +31,6 @@
       <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
       
       <guid>https://vigorwei.github.io/tags/hexo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://vigorwei.github.io/tags/hugo/</link>
-      <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

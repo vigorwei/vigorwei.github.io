@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>golang on My hugoBlog</title>
+    <title>golang on My Blog</title>
     <link>https://vigorwei.github.io/series/golang/</link>
-    <description>Recent content in golang on My hugoBlog</description>
+    <description>Recent content in golang on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 11 Apr 2019 23:36:51 +0800</lastBuildDate><atom:link href="https://vigorwei.github.io/series/golang/index.xml" rel="self" type="application/rss+xml" />
@@ -17,21 +17,12 @@
     </item>
     
     <item>
-      <title>1</title>
+      <title>20</title>
       <link>https://vigorwei.github.io/posts/1/</link>
       <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
       
       <guid>https://vigorwei.github.io/posts/1/</guid>
-      <description>哈哈呵呵得得</description>
-    </item>
-    
-    <item>
-      <title>9</title>
-      <link>https://vigorwei.github.io/posts/9/</link>
-      <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/posts/9/</guid>
-      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
+      <description>hugo常用命令 git clone https://github.com/digitalcraftsman/hugo-agency-theme hugo server -t hugo-theme-diaspora-master &amp;ndash;buildDrafts hugo new post/blog.md hugo &amp;ndash;theme=hugo-agency-theme &amp;ndash;baseUrl=&amp;ldquo;https://lastknightcoder.github.io/&amp;quot; &amp;ndash;buildDrafts cd public git init git add * git commit -m &amp;ldquo;我的 hugo 博客第一次提交</description>
     </item>
     
   </channel>

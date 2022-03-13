@@ -5,12 +5,15 @@
 预览：[demo](https://diaspora.hojun.cn/)
 ![](https://cdn.jsdelivr.net/gh/hojun2/hojun2.github.io/img/diaspora.jpg)
 
+## 交流群
+若你是使用者，加群QQ: 801511924
 
+若你是创作者，加群QQ: 194472590
 
 ## 下载安装
 ```cmd
 cd <YOUR Bolg Root Dir 到你博客根目录>
-git clone git@github.com:vigorwei/hugo-theme-diaspora.git themes/Diaspora
+git clone git@github.com:honjun/hugo-theme-diaspora.git themes/Diaspora
 ```
 
 ## 使用

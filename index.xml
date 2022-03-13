@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My hugoBlog</title>
+    <title>My Blog</title>
     <link>https://vigorwei.github.io/</link>
-    <description>Recent content on My hugoBlog</description>
+    <description>Recent content on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 20 Apr 2019 23:08:32 +0800</lastBuildDate><atom:link href="https://vigorwei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://vigorwei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1</title>
+      <link>https://vigorwei.github.io/posts/2/</link>
+      <pubDate>Sun, 13 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://vigorwei.github.io/posts/2/</guid>
+      <description>什么是hugo 而且就如它官网介绍：The world’s fastest framework for building websites。Hugo是目前最快的</description>
+    </item>
+    
     <item>
       <title>Links</title>
       <link>https://vigorwei.github.io/links/</link>
@@ -35,48 +44,12 @@
     </item>
     
     <item>
-      <title>1</title>
+      <title>20</title>
       <link>https://vigorwei.github.io/posts/1/</link>
       <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
       
       <guid>https://vigorwei.github.io/posts/1/</guid>
-      <description>哈哈呵呵得得</description>
-    </item>
-    
-    <item>
-      <title>10</title>
-      <link>https://vigorwei.github.io/posts/10/</link>
-      <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/posts/10/</guid>
-      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
-    </item>
-    
-    <item>
-      <title>11</title>
-      <link>https://vigorwei.github.io/posts/11/</link>
-      <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/posts/11/</guid>
-      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
-    </item>
-    
-    <item>
-      <title>12</title>
-      <link>https://vigorwei.github.io/posts/12/</link>
-      <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/posts/12/</guid>
-      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
-    </item>
-    
-    <item>
-      <title>2</title>
-      <link>https://vigorwei.github.io/posts/2/</link>
-      <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/posts/2/</guid>
-      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
+      <description>hugo常用命令 git clone https://github.com/digitalcraftsman/hugo-agency-theme hugo server -t hugo-theme-diaspora-master &amp;ndash;buildDrafts hugo new post/blog.md hugo &amp;ndash;theme=hugo-agency-theme &amp;ndash;baseUrl=&amp;ldquo;https://lastknightcoder.github.io/&amp;quot; &amp;ndash;buildDrafts cd public git init git add * git commit -m &amp;ldquo;我的 hugo 博客第一次提交</description>
     </item>
     
     <item>
@@ -94,51 +67,6 @@
       <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
       
       <guid>https://vigorwei.github.io/posts/4/</guid>
-      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
-    </item>
-    
-    <item>
-      <title>5</title>
-      <link>https://vigorwei.github.io/posts/5/</link>
-      <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/posts/5/</guid>
-      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
-    </item>
-    
-    <item>
-      <title>6</title>
-      <link>https://vigorwei.github.io/posts/6/</link>
-      <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/posts/6/</guid>
-      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
-    </item>
-    
-    <item>
-      <title>7</title>
-      <link>https://vigorwei.github.io/posts/7/</link>
-      <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/posts/7/</guid>
-      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
-    </item>
-    
-    <item>
-      <title>8</title>
-      <link>https://vigorwei.github.io/posts/8/</link>
-      <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/posts/8/</guid>
-      <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
-    </item>
-    
-    <item>
-      <title>9</title>
-      <link>https://vigorwei.github.io/posts/9/</link>
-      <pubDate>Wed, 13 Mar 2019 23:23:34 +0800</pubDate>
-      
-      <guid>https://vigorwei.github.io/posts/9/</guid>
       <description>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。对比Hexo，Hugo</description>
     </item>
     

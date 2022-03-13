@@ -2,11 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://vigorwei.github.io/links/</loc>
-    <lastmod>2019-04-20T23:10:44+08:00</lastmod>
+    <loc>https://vigorwei.github.io/posts/2/</loc>
+    <lastmod>2022-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vigorwei.github.io/categories/</loc>
+    <lastmod>2022-03-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://vigorwei.github.io/</loc>
-    <lastmod>2019-04-20T23:08:32+08:00</lastmod>
+    <lastmod>2022-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vigorwei.github.io/posts/</loc>
+    <lastmod>2022-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vigorwei.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2022-03-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://vigorwei.github.io/links/</loc>
+    <lastmod>2019-04-20T23:10:44+08:00</lastmod>
   </url><url>
     <loc>https://vigorwei.github.io/about/</loc>
     <lastmod>2019-04-20T23:08:32+08:00</lastmod>
@@ -17,13 +29,7 @@
     <loc>https://vigorwei.github.io/categories/123/</loc>
     <lastmod>2019-04-11T23:36:51+08:00</lastmod>
   </url><url>
-    <loc>https://vigorwei.github.io/categories/</loc>
-    <lastmod>2019-04-11T23:36:51+08:00</lastmod>
-  </url><url>
     <loc>https://vigorwei.github.io/series/golang/</loc>
-    <lastmod>2019-04-11T23:36:51+08:00</lastmod>
-  </url><url>
-    <loc>https://vigorwei.github.io/posts/</loc>
     <lastmod>2019-04-11T23:36:51+08:00</lastmod>
   </url><url>
     <loc>https://vigorwei.github.io/series/</loc>
@@ -44,52 +50,16 @@
     <loc>https://vigorwei.github.io/posts/1/</loc>
     <lastmod>2019-03-13T23:23:34+08:00</lastmod>
   </url><url>
-    <loc>https://vigorwei.github.io/posts/10/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
-    <loc>https://vigorwei.github.io/posts/11/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
-    <loc>https://vigorwei.github.io/posts/12/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
-    <loc>https://vigorwei.github.io/posts/2/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
     <loc>https://vigorwei.github.io/posts/3/</loc>
     <lastmod>2019-03-13T23:23:34+08:00</lastmod>
   </url><url>
     <loc>https://vigorwei.github.io/posts/4/</loc>
     <lastmod>2019-03-13T23:23:34+08:00</lastmod>
   </url><url>
-    <loc>https://vigorwei.github.io/posts/5/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
-    <loc>https://vigorwei.github.io/posts/6/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
-    <loc>https://vigorwei.github.io/posts/7/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
-    <loc>https://vigorwei.github.io/posts/8/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
-    <loc>https://vigorwei.github.io/posts/9/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
     <loc>https://vigorwei.github.io/tags/hexo/</loc>
     <lastmod>2019-03-13T23:23:34+08:00</lastmod>
   </url><url>
-    <loc>https://vigorwei.github.io/tags/hugo/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
     <loc>https://vigorwei.github.io/tags/web/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
-    <loc>https://vigorwei.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2019-03-13T23:23:34+08:00</lastmod>
-  </url><url>
-    <loc>https://vigorwei.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2019-03-13T23:23:34+08:00</lastmod>
   </url>
 </urlset>
