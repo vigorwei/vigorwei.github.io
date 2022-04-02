@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://vigorwei.github.io/</loc>
-    <lastmod>2022-03-16T15:47:13+08:00</lastmod>
+    <lastmod>2022-04-02T09:01:28+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -21,7 +21,7 @@
                 />
   </url><url>
     <loc>https://vigorwei.github.io/categories/</loc>
-    <lastmod>2022-03-16T15:47:13+08:00</lastmod>
+    <lastmod>2022-04-02T09:01:28+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -38,8 +38,11 @@
                 href="https://vigorwei.github.io/categories/"
                 />
   </url><url>
+    <loc>https://vigorwei.github.io/p/kmp/</loc>
+    <lastmod>2022-04-02T09:01:28+08:00</lastmod>
+  </url><url>
     <loc>https://vigorwei.github.io/post/</loc>
-    <lastmod>2022-03-16T15:47:13+08:00</lastmod>
+    <lastmod>2022-04-02T09:01:28+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
@@ -51,10 +54,13 @@
                 href="https://vigorwei.github.io/post/"
                 />
   </url><url>
-    <loc>https://vigorwei.github.io/p/sping5-aop/</loc>
-    <lastmod>2022-03-16T15:47:13+08:00</lastmod>
-  </url><url>
     <loc>https://vigorwei.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2022-04-02T09:01:28+08:00</lastmod>
+  </url><url>
+    <loc>https://vigorwei.github.io/p/java-api/</loc>
+    <lastmod>2022-03-17T11:14:11+08:00</lastmod>
+  </url><url>
+    <loc>https://vigorwei.github.io/p/sping5-aop/</loc>
     <lastmod>2022-03-16T15:47:13+08:00</lastmod>
   </url><url>
     <loc>https://vigorwei.github.io/p/spring5-ioc%E6%B3%A8%E8%A7%A3%E6%96%B9%E5%BC%8F/</loc>
