@@ -14,7 +14,7 @@
         <guid>https://vigorwei.github.io/p/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</guid>
         <description>&lt;img src="https://vigorwei.github.io/p/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/wallhaven-672007-2.jpg" alt="Featured image of post 选择排序" /&gt;&lt;h2 id=&#34;选择排序&#34;&gt;选择排序&lt;/h2&gt;
 &lt;p&gt;选择排序（select sorting）也是一种简单的排序方法。它的&lt;strong&gt;基本思想&lt;/strong&gt;是：第一次从arr[0]~arr[n-1]中选取最小值，与arr[0]交换，第二次从arr[1]~arr[n-1]中选取最小值，与arr[1]交换，第三次从arr[2]~arr[n-1]中选取最小值，与arr[2]交换，…，第i次从arr[i-1]~arr[n-1]中选取最小值，与arr[i-1]交换，…, 第n-1次从arr[n-2]~arr[n-1]中选取最小值，与arr[n-2]交换，总共通过n-1次，得到一个按排序码从小到大排列的有序序列。&lt;/p&gt;
-&lt;h3 id=&#34;冒泡排序&#34;&gt;冒泡排序&lt;/h3&gt;
+&lt;h3 id=&#34;heading&#34;&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;https://vigorwei.github.io/p/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/%E5%9B%BE%E7%89%872.jpg&#34;
 	width=&#34;632&#34;
 	height=&#34;347&#34;
