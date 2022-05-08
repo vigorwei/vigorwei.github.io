@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='基数排序 基数排序基本思想
-1)将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。
-2)这样说明，比较难理解，下面我们看一个图文解释，理解基数排序的步骤
-图解 将数组 {53, 3, 542, 748, 14, 214} 使用基数排序, 进行升序排序。
-   '><title>基数排序</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Spring 的 Bean 默认都是单例的，某些情况下，单例是并发不安全的，以 Controller 举例，问题根源在于，我们可能会在 Controller 中定义成员变量，如此一来，多个请求来临，进入的都是同一个单例的 Controller 对象，并对此成员变量的值进行修改操作，因此会互相影响，无法达到并发安全（不同于线程隔离的概念，后面会解释到）的效果。
+1 2 3 4 5 6 7 8 9  @Controller public class Controller { private int i; @Bean @ResponseBody public int test() { return &#43;&#43;i; } }   多次访问此 url，可以看到每次的结果都是自增的，所以这样的代码显然是并发不安全的。
+1、单例变原型 对 web 项目，可以 Controller 类上加注解@Scope(&amp;quot;prototype&amp;quot;) 或 @Scope(&amp;quot;request&amp;quot;)，对非 web 项目，在 Component 类上添加注解 @Scope(&amp;quot;prototype&amp;quot;) 。
+这种方式实现起来非常简单，但增大了 Bean 创建实例化销毁的服务器资源开销。
+2、尽量避免使用成员变量 这尽量避免这么用单例 Bean 的成员变量，在业务允许的条件下，将成员变量替换为 RequestMapping 方法中的局部变量，多省事。这种方式自然是最恰当的，本人也是最推荐。代码修改如下
+1 2 3 4 5 6 7 8 9  @Controller public class ontroller { @GetMapping(&amp;#34;test&amp;#34;) @ResponseBody public int test() { int i = 0; return &#43;&#43;i; } }   3、使用并发安全的类 Java 作为功能性超强的编程语言，API 丰富，如果非要在单例 Bean 中使用成员变量，可以考虑使用并发安全的容器，如 ConcurrentHashMap、ConcurrentHashSet 等等，将我们的成员变量（一般可以是当前运行中的任务列表等这类变量）包装到这些并发安全的容器中进行管理即可。'><title>Spring单例Bean怎么保证并发安全</title>
 
-<link rel='canonical' href='https://vigorwei.github.io/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/'>
+<link rel='canonical' href='https://vigorwei.github.io/p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/'>
 
-<link rel="stylesheet" href="/scss/style.min.b80bf249ce4a22cf55e8d7340a0b37a2f2c10f54f3a9a49cb94b694a2eb0bbea.css"><meta property='og:title' content='基数排序'>
-<meta property='og:description' content='基数排序 基数排序基本思想
-1)将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。
-2)这样说明，比较难理解，下面我们看一个图文解释，理解基数排序的步骤
-图解 将数组 {53, 3, 542, 748, 14, 214} 使用基数排序, 进行升序排序。
-   '>
-<meta property='og:url' content='https://vigorwei.github.io/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/'>
+<link rel="stylesheet" href="/scss/style.min.b80bf249ce4a22cf55e8d7340a0b37a2f2c10f54f3a9a49cb94b694a2eb0bbea.css"><meta property='og:title' content='Spring单例Bean怎么保证并发安全'>
+<meta property='og:description' content='Spring 的 Bean 默认都是单例的，某些情况下，单例是并发不安全的，以 Controller 举例，问题根源在于，我们可能会在 Controller 中定义成员变量，如此一来，多个请求来临，进入的都是同一个单例的 Controller 对象，并对此成员变量的值进行修改操作，因此会互相影响，无法达到并发安全（不同于线程隔离的概念，后面会解释到）的效果。
+1 2 3 4 5 6 7 8 9  @Controller public class Controller { private int i; @Bean @ResponseBody public int test() { return &#43;&#43;i; } }   多次访问此 url，可以看到每次的结果都是自增的，所以这样的代码显然是并发不安全的。
+1、单例变原型 对 web 项目，可以 Controller 类上加注解@Scope(&amp;quot;prototype&amp;quot;) 或 @Scope(&amp;quot;request&amp;quot;)，对非 web 项目，在 Component 类上添加注解 @Scope(&amp;quot;prototype&amp;quot;) 。
+这种方式实现起来非常简单，但增大了 Bean 创建实例化销毁的服务器资源开销。
+2、尽量避免使用成员变量 这尽量避免这么用单例 Bean 的成员变量，在业务允许的条件下，将成员变量替换为 RequestMapping 方法中的局部变量，多省事。这种方式自然是最恰当的，本人也是最推荐。代码修改如下
+1 2 3 4 5 6 7 8 9  @Controller public class ontroller { @GetMapping(&amp;#34;test&amp;#34;) @ResponseBody public int test() { int i = 0; return &#43;&#43;i; } }   3、使用并发安全的类 Java 作为功能性超强的编程语言，API 丰富，如果非要在单例 Bean 中使用成员变量，可以考虑使用并发安全的容器，如 ConcurrentHashMap、ConcurrentHashSet 等等，将我们的成员变量（一般可以是当前运行中的任务列表等这类变量）包装到这些并发安全的容器中进行管理即可。'>
+<meta property='og:url' content='https://vigorwei.github.io/p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/'>
 <meta property='og:site_name' content='Cammelia'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-03-13T17:08:22&#43;08:00'/><meta property='article:modified_time' content='2022-03-13T17:08:22&#43;08:00'/><meta property='og:image' content='https://vigorwei.github.io/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/wallhaven-672007-2.jpg' />
-<meta name="twitter:title" content="基数排序">
-<meta name="twitter:description" content="基数排序 基数排序基本思想
-1)将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。
-2)这样说明，比较难理解，下面我们看一个图文解释，理解基数排序的步骤
-图解 将数组 {53, 3, 542, 748, 14, 214} 使用基数排序, 进行升序排序。
-   "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://vigorwei.github.io/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/wallhaven-672007-2.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-05-08T15:50:56&#43;08:00'/><meta property='article:modified_time' content='2022-05-08T15:50:56&#43;08:00'/><meta property='og:image' content='https://vigorwei.github.io/p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/Snipaste_2022-05-08_16-04-01.png' />
+<meta name="twitter:title" content="Spring单例Bean怎么保证并发安全">
+<meta name="twitter:description" content="Spring 的 Bean 默认都是单例的，某些情况下，单例是并发不安全的，以 Controller 举例，问题根源在于，我们可能会在 Controller 中定义成员变量，如此一来，多个请求来临，进入的都是同一个单例的 Controller 对象，并对此成员变量的值进行修改操作，因此会互相影响，无法达到并发安全（不同于线程隔离的概念，后面会解释到）的效果。
+1 2 3 4 5 6 7 8 9  @Controller public class Controller { private int i; @Bean @ResponseBody public int test() { return &#43;&#43;i; } }   多次访问此 url，可以看到每次的结果都是自增的，所以这样的代码显然是并发不安全的。
+1、单例变原型 对 web 项目，可以 Controller 类上加注解@Scope(&amp;quot;prototype&amp;quot;) 或 @Scope(&amp;quot;request&amp;quot;)，对非 web 项目，在 Component 类上添加注解 @Scope(&amp;quot;prototype&amp;quot;) 。
+这种方式实现起来非常简单，但增大了 Bean 创建实例化销毁的服务器资源开销。
+2、尽量避免使用成员变量 这尽量避免这么用单例 Bean 的成员变量，在业务允许的条件下，将成员变量替换为 RequestMapping 方法中的局部变量，多省事。这种方式自然是最恰当的，本人也是最推荐。代码修改如下
+1 2 3 4 5 6 7 8 9  @Controller public class ontroller { @GetMapping(&amp;#34;test&amp;#34;) @ResponseBody public int test() { int i = 0; return &#43;&#43;i; } }   3、使用并发安全的类 Java 作为功能性超强的编程语言，API 丰富，如果非要在单例 Bean 中使用成员变量，可以考虑使用并发安全的容器，如 ConcurrentHashMap、ConcurrentHashSet 等等，将我们的成员变量（一般可以是当前运行中的任务列表等这类变量）包装到这些并发安全的容器中进行管理即可。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://vigorwei.github.io/p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/Snipaste_2022-05-08_16-04-01.png' />
     </head>
     <body class="
     article-page
@@ -263,13 +266,13 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">
-                <img src="/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/wallhaven-672007-2_hu349411a28258a9cc5f53cf994dab486b_213344_800x0_resize_q75_box.jpg"
-                        srcset="/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/wallhaven-672007-2_hu349411a28258a9cc5f53cf994dab486b_213344_800x0_resize_q75_box.jpg 800w, /p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/wallhaven-672007-2_hu349411a28258a9cc5f53cf994dab486b_213344_1600x0_resize_q75_box.jpg 1600w"
+            <a href="/p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/">
+                <img src="/p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/Snipaste_2022-05-08_16-04-01_hudd11e03f6f1025e3eb66a8caeb94c8f9_10539_800x0_resize_box_3.png"
+                        srcset="/p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/Snipaste_2022-05-08_16-04-01_hudd11e03f6f1025e3eb66a8caeb94c8f9_10539_800x0_resize_box_3.png 800w, /p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/Snipaste_2022-05-08_16-04-01_hudd11e03f6f1025e3eb66a8caeb94c8f9_10539_1600x0_resize_box_3.png 1600w"
                         width="800" 
-                        height="450" 
+                        height="408" 
                         loading="lazy"
-                        alt="Featured image of post 基数排序" />
+                        alt="Featured image of post Spring单例Bean怎么保证并发安全" />
                 
             </a>
         </div>
@@ -288,7 +291,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/">基数排序</a>
+            <a href="/p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/">Spring单例Bean怎么保证并发安全</a>
         </h2>
     
         
@@ -307,7 +310,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 13, 2022</time>
+                <time class="article-time--published">May 08, 2022</time>
             </div>
         
 
@@ -336,61 +339,66 @@
     <section class="article-content">
     
     
-    <h2 id="基数排序">基数排序</h2>
-<p><strong>基数排序基本思想</strong></p>
-<p>1)将所有待比较数值统一为同样的数位长度，数位较短的数前面补零。然后，从最低位开始，依次进行一次排序。这样从最低位排序一直到最高位排序完成以后, 数列就变成一个有序序列。</p>
-<p>2)这样说明，比较难理解，下面我们看一个图文解释，理解基数排序的步骤</p>
-<h3 id="图解">图解</h3>
-<p>将数组 {53, 3, 542, 748, 14, 214} 使用基数排序, 进行升序排序。</p>
-<p><img src="/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/%E5%9B%BE%E7%89%877.png"
-	width="1163"
-	height="423"
-	srcset="/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/%E5%9B%BE%E7%89%877_hudde3486d04fcd4f682e0af3031f8a578_26363_480x0_resize_box_3.png 480w, /p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/%E5%9B%BE%E7%89%877_hudde3486d04fcd4f682e0af3031f8a578_26363_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-		alt="图片7"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="274"
-		data-flex-basis="659px"
-	
-></p>
-<p><img src="/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/%E5%9B%BE%E7%89%878.png"
-	width="1164"
-	height="423"
-	srcset="/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/%E5%9B%BE%E7%89%878_huf8ca4adcadf309ff5e9996ba9622dd93_23552_480x0_resize_box_3.png 480w, /p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/%E5%9B%BE%E7%89%878_huf8ca4adcadf309ff5e9996ba9622dd93_23552_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-		alt="图片8"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="275"
-		data-flex-basis="660px"
-	
-></p>
-<p><img src="/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/%E5%9B%BE%E7%89%879.png"
-	width="1218"
-	height="423"
-	srcset="/p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/%E5%9B%BE%E7%89%879_hub4ec17159dc3163be794c9fe7339f2a5_27389_480x0_resize_box_3.png 480w, /p/%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F/%E5%9B%BE%E7%89%879_hub4ec17159dc3163be794c9fe7339f2a5_27389_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-		alt="图片9"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="287"
-		data-flex-basis="691px"
-	
-></p>
+    <p>Spring 的 Bean 默认都是单例的，某些情况下，单例是并发不安全的，以 <code>Controller</code> 举例，问题根源在于，我们可能会在 <code>Controller</code> 中定义成员变量，如此一来，多个请求来临，进入的都是同一个单例的 <code>Controller</code> 对象，并对此成员变量的值进行修改操作，因此会互相影响，无法达到并发安全（不同于线程隔离的概念，后面会解释到）的效果。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code></code></pre></td>
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Controller</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Controller</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kt">int</span> <span class="n">i</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@Bean</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@ResponseBody</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">test</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="o">++</span><span class="n">i</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div><p>多次访问此 url，可以看到每次的结果都是自增的，所以这样的代码显然是并发不安全的。</p>
+<h3 id="1单例变原型">1、单例变原型</h3>
+<p>对 web 项目，可以 <code>Controller</code> 类上加注解@<code>Scope(&quot;prototype&quot;)</code> 或 <code>@Scope(&quot;request&quot;)</code>，对非 web 项目，在 <code>Component</code> 类上添加注解 <code>@Scope(&quot;prototype&quot;)</code> 。</p>
+<p>这种方式实现起来非常简单，但增大了 Bean 创建实例化销毁的服务器资源开销。</p>
+<h3 id="2尽量避免使用成员变量">2、尽量避免使用成员变量</h3>
+<p>这尽量避免这么用单例 Bean 的成员变量，在业务允许的条件下，将成员变量替换为 <code>RequestMapping</code> 方法中的局部变量，多省事。这种方式自然是最恰当的，本人也是最推荐。代码修改如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Controller</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ontroller</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">&#34;test&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@ResponseBody</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">test</span><span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">         <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="o">++</span><span class="n">i</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="3使用并发安全的类">3、使用并发安全的类</h3>
+<p>Java 作为功能性超强的编程语言，API 丰富，如果非要在单例 Bean 中使用成员变量，可以考虑使用并发安全的容器，如 <code>ConcurrentHashMap</code>、<code>ConcurrentHashSet</code> 等等，将我们的成员变量（一般可以是当前运行中的任务列表等这类变量）包装到这些并发安全的容器中进行管理即可。</p>
+<h3 id="4分布式或微服务的并发安全">4、分布式或微服务的并发安全</h3>
+<p>如果还要进一步考虑到微服务或分布式服务的影响，方式 3 便不足以处理了，所以可以借助于可以共享某些信息的分布式缓存中间件如 Redis 等，这样即可保证同一种服务的不同服务实例都拥有同一份共享信息（如当前运行中的任务列表等这类变量）。</p>
+
 </section>
 
 
@@ -423,29 +431,6 @@
     <h2 class="section-title">Related contents</h2>
     <div class="related-contents">
         <div class="flex article-list--tile">
-            
-                
-<article class="has-image">
-    <a href="/p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/">
-        
-        
-            <div class="article-image">
-                <img src="/p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/_hudd11e03f6f1025e3eb66a8caeb94c8f9_10539_ed70088f79d338d75806556fad278d01.png" 
-                        width="250" 
-                        height="150" 
-                        loading="lazy"
-                        alt="Featured image of post Spring单例Bean怎么保证并发安全"
-                        
-                        data-hash="md5-vGNUmId6NWi9OzE7z/4Kkw==">
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Spring单例Bean怎么保证并发安全</h2>
-        </div>
-    </a>
-</article>
             
                 
 <article class="has-image">
@@ -524,6 +509,29 @@
 
         <div class="article-details">
             <h2 class="article-title">Sping5 Aop</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="has-image">
+    <a href="/p/spring5-ioc%E6%B3%A8%E8%A7%A3%E6%96%B9%E5%BC%8F/">
+        
+        
+            <div class="article-image">
+                <img src="/p/spring5-ioc%E6%B3%A8%E8%A7%A3%E6%96%B9%E5%BC%8F/cover-v1.2.0.04cd62ad904ebcddc0265ad8f9399d45_hu27a756884c7e9dfb9cbdf758af038fda_343566_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Spring5-IOC注解方式"
+                        
+                        data-hash="md5-BM1irZBOvN3AJlrY&#43;TmdRQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Spring5-IOC注解方式</h2>
         </div>
     </a>
 </article>
@@ -696,9 +704,12 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#基数排序">基数排序</a>
+    <li>
       <ol>
-        <li><a href="#图解">图解</a></li>
+        <li><a href="#1单例变原型">1、单例变原型</a></li>
+        <li><a href="#2尽量避免使用成员变量">2、尽量避免使用成员变量</a></li>
+        <li><a href="#3使用并发安全的类">3、使用并发安全的类</a></li>
+        <li><a href="#4分布式或微服务的并发安全">4、分布式或微服务的并发安全</a></li>
       </ol>
     </li>
   </ol>
