@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://vigorwei.github.io/</loc>
-    <lastmod>2022-05-08T15:50:56+08:00</lastmod>
+    <lastmod>2022-05-11T15:57:10+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -21,7 +21,7 @@
                 />
   </url><url>
     <loc>https://vigorwei.github.io/categories/</loc>
-    <lastmod>2022-05-08T15:50:56+08:00</lastmod>
+    <lastmod>2022-05-11T15:57:10+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -38,17 +38,23 @@
                 href="https://vigorwei.github.io/categories/"
                 />
   </url><url>
+    <loc>https://vigorwei.github.io/p/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</loc>
+    <lastmod>2022-05-11T15:57:10+08:00</lastmod>
+  </url><url>
     <loc>https://vigorwei.github.io/post/</loc>
-    <lastmod>2022-05-08T15:50:56+08:00</lastmod>
+    <lastmod>2022-05-11T15:57:10+08:00</lastmod>
+  </url><url>
+    <loc>https://vigorwei.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2022-05-11T15:57:10+08:00</lastmod>
   </url><url>
     <loc>https://vigorwei.github.io/p/spring%E5%8D%95%E4%BE%8Bbean%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E5%B9%B6%E5%8F%91%E5%AE%89%E5%85%A8/</loc>
     <lastmod>2022-05-08T15:50:56+08:00</lastmod>
   </url><url>
-    <loc>https://vigorwei.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2022-05-08T15:50:56+08:00</lastmod>
-  </url><url>
     <loc>https://vigorwei.github.io/p/springmvc/</loc>
     <lastmod>2022-05-06T15:55:26+08:00</lastmod>
+  </url><url>
+    <loc>https://vigorwei.github.io/archives/</loc>
+    <lastmod>2022-04-20T13:29:27+08:00</lastmod>
   </url><url>
     <loc>https://vigorwei.github.io/p/kmp/</loc>
     <lastmod>2022-04-02T09:01:28+08:00</lastmod>
@@ -109,9 +115,6 @@
   </url><url>
     <loc>https://vigorwei.github.io/about/</loc>
     <lastmod>2019-04-20T23:08:32+08:00</lastmod>
-  </url><url>
-    <loc>https://vigorwei.github.io/archives/</loc>
-    <lastmod>2019-04-20T13:29:27+08:00</lastmod>
   </url><url>
     <loc>https://vigorwei.github.io/links/</loc>
   </url><url>
